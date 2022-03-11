@@ -1,37 +1,38 @@
 #include <stdio.h>
+
 /**
- *main - entry point
- *Description: random number in n +ve/-ve
- *Return: 0 on success
- */
+ * main - prints a list of double didgits
+ *
+ * Description: digits should not be repeated twice
+ * Return: Always(0) Success
+*/
+
 int main(void)
 {
-int n, k = 0, m;
-for (n = 0; n < 9; n++)
-{
-for (m = k ; m <= 9; m++)
-{
-if (n != m)
-{
-putchar(n);
-putchar(m);
-}
-if (n == m)
-{
-continue;
-}
-if (n == '8' && m == '9')
-{
-break;
-}
-else
-{
-putchar(',');
-putchar(' ');
-}
-}
-k++;
-}
-putchar('\n');
-return (0);
+	int i, j;
+
+	for (i = 48; i < 58; i++)
+	{
+		for (j = 48; j < 58; j++)
+		{
+			if (i == j)
+			{
+				continue;
+			}
+			putchar(i);
+			putchar(j);
+			if (i == 56 && j == 57)
+			{
+				break;
+			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+	}
+	putchar('\n');
+
+	return (0);
 }
