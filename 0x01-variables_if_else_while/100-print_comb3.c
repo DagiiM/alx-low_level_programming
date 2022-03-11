@@ -1,38 +1,36 @@
+
+  
 #include <stdio.h>
 
 /**
- * main - prints a list of double didgits
+ * main - Entry point
  *
- * Description: digits should not be repeated twice
- * Return: Always(0) Success
-*/
-
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	int i, j;
+	int c = 0;
+	int f_d;
+	int l_d;
 
-	for (i = 48; i < 58; i++)
+	while (c <= 99)
 	{
-		for (j = 48; j < 58; j++)
+		f_d = (c / 10 + '0');
+		l_d = (c % 10 + '0');
+
+		if (f_d < l_d)
 		{
-			if (i == j)
-			{
-				continue;
-			}
-			putchar(i);
-			putchar(j);
-			if (i == 56 && j == 57)
-			{
-				break;
-			}
-			else
+			putchar(f_d);
+			putchar(l_d);
+
+			if (c != 89)
 			{
 				putchar(',');
 				putchar(' ');
 			}
 		}
+		c++;
 	}
 	putchar('\n');
-
 	return (0);
 }
