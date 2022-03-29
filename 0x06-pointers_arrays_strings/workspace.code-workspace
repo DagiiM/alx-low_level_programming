@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../var/www/eleso-academy-v1.0.5"
+		},
+		{
+			"path": "../../mksucu.org"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdio.h": "c",
+			"main.h": "c"
+		}
+	}
+}
